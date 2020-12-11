@@ -9,7 +9,6 @@ int main(const char ** argv, int argc) {
     char *line = NULL;
     size_t length = 0;
     size_t valid_pass_cnt = 0;
-    //bool is_empty_line = false;
     size_t empty_char_cnt = 0;
     FILE *fp = fopen("input.txt", "r");
     
@@ -18,5 +17,7 @@ int main(const char ** argv, int argc) {
         bool empty_line = is_empty_line(line, line_size);
         printf("is empty line: %d\n", empty_line);
     }
+    
+    fclose(fp);
     return 0;
 }
