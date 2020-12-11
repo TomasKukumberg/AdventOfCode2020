@@ -10,6 +10,7 @@ int main(char** argv, int argc) {
     line_cnt = count_lines(fp);
     load_file(&arr, fp, line_cnt);
     printf("Result: %d", get_result(arr, line_cnt, 2020));
+    
     fclose(fp);
     free(arr);
     return 0;
