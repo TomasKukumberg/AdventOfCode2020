@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(char** argv, int argc) {
-    int* arr = malloc(sizeof(int) * 6);
+    int* arr;
     FILE *fp = fopen("numbers.txt", "r");
     int line_cnt;
 

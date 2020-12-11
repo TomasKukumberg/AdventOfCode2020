@@ -20,6 +20,7 @@ void load_file(int* arr, FILE *fp, int len) {
     char *line = NULL;
     size_t length = 0;
     size_t i = 0;
+    arr = malloc(sizeof(int) * len);
 
     while ((nread = getline(&line, &length, fp)) != -1) {
         arr[i++] = atoi(line); //TODO replace with strtonum(const char *nptr, long long minval, long long maxval,const char **errstr);
