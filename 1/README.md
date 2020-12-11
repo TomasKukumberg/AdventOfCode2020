@@ -1,5 +1,7 @@
-## Compilation
+## Compilation and launch
 
 ```bash
-gcc -o output .\main.c .\func.c
+1. cd into folder AdventOfCode/1/
+2. compile: gcc -o output .\main.c .\func.c
+3. open the output file
 ```
