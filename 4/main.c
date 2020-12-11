@@ -24,7 +24,7 @@ int main(const char ** argv, int argc) {
             }
             reset_fields(fields, SIZE);
         } else {
-            validate_line();
+            validate_line(); // (strstr(sent, word) finds a substring in string
         }
     }
     
