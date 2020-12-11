@@ -4,9 +4,9 @@
 #include <stdio.h>
 
 
-void load_file(int*, FILE *, int);
+void load_file(int**, FILE *, int);
 void print_arr(int*, int);
 int get_result(int*, int, int);
-int count_lines(FILE *);
+size_t count_lines(FILE *);
 
 #endif
