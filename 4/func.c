@@ -18,7 +18,6 @@ void reset_entry(bool *arr, size_t len) {
 }
 
 void validate_line(char* line, bool* entry) {
-    size_t line_size = strlen(line);
     if(strstr(line, "byr") != NULL) {
         entry[0] = true;
     }
