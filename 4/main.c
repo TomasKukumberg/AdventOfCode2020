@@ -4,30 +4,34 @@
 #include <stdio.h>
 #include "func.h"
 
-#define SIZE 7
+#define ENTRY_SIZE 7
 
 int main(const char ** argv, int argc) {
-    size_t nread;
+    int nread;
     char *line = NULL;
     size_t length = 0;
     size_t valid_pass_cnt = 0;
     size_t empty_char_cnt = 0;
-    FILE *fp = fopen("input.txt", "r");
+    FILE *fp = fopen("input2.txt", "r");
     size_t count = 0;
-    bool fields[SIZE] = {0};
+    bool entry[ENTRY_SIZE] = {false};
 
     while ( ( nread = getline(&line, &length, fp) ) != -1) {
-        if(is_empty(line, strlen(line))) {
-            bool test = is_entry_valid();
-            if(test) {
-                ++count;
-            }
-            reset_fields(fields, SIZE);
+        if(is_empty(line, strlen(line)) == false) {
+            validate_line(line, entry);
         } else {
-            validate_line(); // (strstr(sent, word) finds a substring in string
+            if(is_valid(entry, ENTRY_SIZE)) {
+                count++;
+            }
+            reset_entry(entry, ENTRY_SIZE);
         }
     }
     
+    if(is_valid(entry, ENTRY_SIZE)) {
+        count++;
+    }
+
+    printf("Number of valid entries: %d", count);
     fclose(fp);
     return 0;
 }
