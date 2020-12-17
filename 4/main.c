@@ -12,7 +12,7 @@ int main(const char ** argv, int argc) {
     size_t length = 0;
     size_t valid_pass_cnt = 0;
     size_t empty_char_cnt = 0;
-    FILE *fp = fopen("input2.txt", "r");
+    FILE *fp = fopen("input.txt", "r");
     size_t count = 0;
     bool entry[ENTRY_SIZE] = {false};
 
