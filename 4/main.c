@@ -1,5 +1,4 @@
 #include <string.h>
-#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include "func.h"
@@ -15,18 +14,17 @@ int main(int argc, char **argv) {
     bool entry[ENTRY_SIZE] = {false};
 
     while ( ( nread = getline(&line, &length, fp) ) != -1) {
-        if(is_empty(line, strlen(line)) == false) {
+        if(is_line_empty(line, strlen(line)) == false) {
             validate_line(line, entry);
         } else {
-            if(is_valid(entry, ENTRY_SIZE)) {
+            if(is_entry_valid(entry, ENTRY_SIZE)) {
                 count++;
             }
-            printf("resetting\n");
             reset_entry(entry, ENTRY_SIZE);
         }
     }
     
-    if(is_valid(entry, ENTRY_SIZE)) {
+    if(is_entry_valid(entry, ENTRY_SIZE)) {
         count++;
     }
 
