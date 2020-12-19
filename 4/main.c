@@ -21,6 +21,7 @@ int main(int argc, char **argv) {
             if(is_valid(entry, ENTRY_SIZE)) {
                 count++;
             }
+            printf("resetting\n");
             reset_entry(entry, ENTRY_SIZE);
         }
     }
