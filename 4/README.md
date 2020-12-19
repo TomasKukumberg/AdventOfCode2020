@@ -1,7 +1,12 @@
-## Compilation and launch
+## Compilation
 
 ```
-1. cd into folder AdventOfCode/4/
-2. gcc -o output .\main.c .\func.c
-3. run the output
+make 
 ```
+
+## Clean workspace from object files and output
+
+```
+make clean
+```
+
