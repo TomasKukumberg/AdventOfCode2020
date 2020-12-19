@@ -2,7 +2,7 @@
 #include "func.h"
 
 int main(char** argv, int argc) {
-    FILE* fp = fopen("log.txt", "r");
+    FILE* fp = fopen("input.txt", "r");
 
     int count = count_valid_passwords(fp);
     printf("Number of valid passwords: %d\n", count);
@@ -10,3 +10,5 @@ int main(char** argv, int argc) {
     fclose(fp);
     return 0;
 }
+
+//TODO FIX PARSING 
