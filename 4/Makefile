@@ -1,4 +1,3 @@
-
 output: main.o func.o
 	gcc main.o func.o -o output
 
