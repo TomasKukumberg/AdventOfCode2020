@@ -8,7 +8,7 @@ func.o: func.c func.h
 	gcc -c func.c
 
 ifeq ($(OS),Windows_NT)
-    clean:
+	clean:
 		del *.o output.exe
 else
 	clean:
