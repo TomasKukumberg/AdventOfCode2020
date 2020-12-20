@@ -42,3 +42,25 @@ int get_result(int* arr, int len, int val) {
         }
     }
 }
+
+int get_result_a(int* arr, int len, int val) {
+    for(size_t i = 0; i < len; i++) {
+        for(size_t j = i + 1; j < len; j++) {
+            if(arr[i] + arr[j] == val) {
+                return arr[i] * arr[j];
+            }
+        }
+    }
+}
+
+int get_result_b(int* arr, int len, int val) {
+    for(size_t i = 0; i < len; i++) {
+        for(size_t j = i + 1; j < len; j++) {
+            for(size_t k = j + 1; k < len; k++) {
+                if(arr[i] + arr[j] + arr[k] == val) {
+                    return arr[i] * arr[j] * arr[k];
+                }
+            }
+        }
+    }
+}
