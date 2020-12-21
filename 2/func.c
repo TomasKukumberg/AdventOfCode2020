@@ -33,6 +33,7 @@ size_t count_valid_passwords_2() {
             ++valid_pass_cnt;
         }
     }
+    free(line);
     fclose(fp);
     return valid_pass_cnt;
 }
