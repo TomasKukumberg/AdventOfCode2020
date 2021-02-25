@@ -30,5 +30,6 @@ int main(int argc, char **argv) {
 
     printf("Number of valid entries: %d", count);
     fclose(fp);
+    free(line);
     return 0;
 }
